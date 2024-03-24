@@ -2,7 +2,6 @@ export let activeEffect: ReactiveEffect | null = null;
 
 export let targetMaps = new WeakMap<object, Map<string, Set<ReactiveEffect>>>();
 
-
 export interface ReactiveEffectOptions {
   scheduler?: () => any;
 }
@@ -26,7 +25,10 @@ export class ReactiveEffect {
   }
 }
 
-export function effect(fn, options: ReactiveEffectOptions = {}): ReactiveEffect['run'] {
+export function effect(
+  fn,
+  options: ReactiveEffectOptions = {}
+): ReactiveEffect["run"] {
   const _effect = new ReactiveEffect(fn);
   _effect.run();
 

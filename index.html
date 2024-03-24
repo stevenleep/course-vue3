@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue3 Reactive</title>
-</head>
-<body>
+  </head>
+  <body>
+    <main>
+      <div class="todo-detail-container"></div>
+
+      <button class="prev-btn">上一页</button>
+      <button class="next-btn">下一页</button>
+    </main>
     <script type="module" src="./index.ts"></script>
-</body>
+  </body>
 </html>
+
+<style>
+  .todo-detail-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 4px;
+  }
+</style>
